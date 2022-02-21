@@ -1,7 +1,3 @@
-# Pass JWT to Resolver with Context (Server-side)
-
-In this demo, you will verify if a token is valid and carry
-
 ## Instructions
 
 * Run `npm install` and `npm run seed` to set up the database.
