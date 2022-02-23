@@ -1,15 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import style from '../../style/main.css';
+import bckgImg from '../../images/bckg.png';
 
 const ProfileList = ({ profiles, title }) => {
-  if (!profiles.length) {
-    return <h3>No Profiles Yet</h3>;
-  }
+  // if (!profiles.length) {
+  //   <a href={bckgImg}>PDF Resume</a>
+
+  //   return <h3>No Profiles Yet</h3>;
+  // }
 
   return (
     <div>
       <h3 className="text-primary">{title}</h3>
       <div className="flex-row justify-space-between my-4">
+      <img className='background'  src={bckgImg} alt="" />
         {profiles &&
           profiles.map((profile) => (
             <div key={profile._id} className="col-12 col-xl-6">
