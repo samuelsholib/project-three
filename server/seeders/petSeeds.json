@@ -1,7 +1,72 @@
-{
-    "name": "",
-    "description": "",
-    "image": "",
-    "price": "",
-    "quantity": ""
-}
+[
+    {
+        "name": "NFT Monkey",
+        "description": "lol this is my monkey now!",
+        "image": "https://i.pinimg.com/originals/7b/31/52/7b31527e3699423b90b81de2584dc381.png",
+        "price": "2,000,000",
+        "quantity": "2"
+    },
+    {
+        "name": "Mr. Cool Bean",
+        "description": "This is kind of like a cute kitty but not?",
+        "image": "https://imgur.com/IuqBHt5",
+        "price": "666",
+        "quantity": "69"
+    },
+    {
+        "name": "Cromp",
+        "description": "PLEASE GET THIS RAT OUT OF HERE",
+        "image": "https://imgur.com/A5zQSaU",
+        "price": "20",
+        "quantity": "5"
+    },
+    {
+        "name": "Mer-kitty",
+        "description": "One of a kind! Very sweet and hungry!",
+        "image": "https://imgur.com/a/ENAZl6v",
+        "price": "69,420",
+        "quantity": "1"
+    },
+    {
+        "name": "Weird fish",
+        "description": "I can't figure out what this guy is but he is cute I guess",
+        "image": "https://imgur.com/a/2yX0fzy",
+        "price": "4.20",
+        "quantity": "666"
+    },
+    {
+        "name": "Bungy",
+        "description": "Beautiful cat that will do anything for a cough drop!",
+        "image": "https://imgur.com/U6MaFqt",
+        "price": "45",
+        "quantity": "2"
+    },
+    {
+        "name": "Chingo",
+        "description": "Watch out for this wild dog and his laser beam!",
+        "image": "https://imgur.com/oCAviHI",
+        "price": "60",
+        "quantity": "20"
+    },
+    {
+        "name": "Cromp",
+        "description": "PLEASE GET THIS RAT OUT OF HERE",
+        "image": "https://imgur.com/A5zQSaU",
+        "price": "20",
+        "quantity": "5"
+    },
+    {
+        "name": "Swanson",
+        "description": "The best little jumping spider!",
+        "image": "https://imgur.com/Pp6nb0T",
+        "price": "100",
+        "quantity": "45"
+    },
+    {
+        "name": "Gregward",
+        "description": "Try his eggs benedict! He is a master chef!",
+        "image": "https://imgur.com/7xWIifS",
+        "price": "75",
+        "quantity": "30"
+    }
+]
