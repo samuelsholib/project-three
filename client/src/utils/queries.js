@@ -1,14 +1,25 @@
 import { gql } from '@apollo/client';
 
-//this is david!!
-
 
 export const QUERY_PROFILES = gql`
-  query allProfiles {
-    profiles {
+  query allUsers {
+    user {
       _id
       name
-      skills
+      pets
+      favorites
+    }
+  }
+`;
+export const QUERY_PETS = gql`
+  query allPets {
+    pet {
+      _id
+      name
+      description
+      image
+      price
+      quantity
     }
   }
 `;
@@ -23,12 +34,26 @@ export const QUERY_SINGLE_PROFILE = gql`
   }
 `;
 
+export const QUERY_SINGLE_PET = gql`
+  query singlePet($petId: ID!) {
+    pet(petId: $petId) {
+      _id
+      name
+      description
+      image
+      price
+      quantity
+    }
+  }
+`;
+
 export const QUERY_ME = gql`
   query me {
     me {
       _id
       name
-      skills
+      pets
+      favorites
     }
   }
 `;

@@ -21,8 +21,8 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  //pets: [Pet.schema],
-  //favorites: [Pet.schema]
+  pets: [Pet.schema],
+  favorites: [Pet.schema]
 });
 
 // set up pre-save middleware to create password
