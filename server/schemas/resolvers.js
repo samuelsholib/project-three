@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
+const { User, Pet } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -8,13 +8,17 @@ const resolvers = {
       return User.find();
     },
 
-    profile: async (parent, { userId }) => {
-      return Profile.findOne({ _id: userId });
+    pets: async () => {
+      return Pet.find()
+    },
+
+    user: async (parent, { userId }) => {
+      return User.findOne({ _id: userId });
     },
     // By adding context to our query, we can retrieve the logged in user without specifically searching for them
     me: async (parent, args, context) => {
       if (context.user) {
-        return Profile.findOne({ _id: context.user._id });
+        return User.findOne({ _id: context.user._id });
       }
       throw new AuthenticationError('You need to be logged in!');
     },
@@ -23,9 +27,9 @@ const resolvers = {
   Mutation: {
     addUser: async (parent, { name, email, password }) => {
       const user = await User.create({ name, email, password });
-      const token = signToken(profile);
+      const token = signToken(user);
 
-      return { token, profile };
+      return { token, user };
     },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
@@ -34,18 +38,18 @@ const resolvers = {
         throw new AuthenticationError('No user with this email found!');
       }
 
-      const correctPw = await profile.isCorrectPassword(password);
+      const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
         throw new AuthenticationError('Incorrect password!');
       }
 
-      const token = signToken(profile);
-      return { token, profile };
+      const token = signToken(user);
+      return { token, user };
     },
 
     // Add a third argument to the resolver to access data in our `context`
-    addFovorite: async (parent, { userId, favorite }, context) => {
+    addFavorite: async (parent, { userId, favorite }, context) => {
       // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
       if (context.user) {
         return User.findOneAndUpdate(

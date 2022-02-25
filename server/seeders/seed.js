@@ -9,7 +9,6 @@ db.once('open', async () => {
     await Pet.deleteMany({})
     await User.create(userSeeds);
     await Pet.create(petSeeds);
-
     console.log('all done!');
     process.exit(0);
   } catch (err) {

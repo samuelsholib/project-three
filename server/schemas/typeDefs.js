@@ -9,7 +9,14 @@ const typeDefs = gql`
     pets: [String]!
     favorites: [String]!
   }
-
+type Pet{
+  _id:ID
+  name:String
+  description:String
+  image:String
+  price:Int
+  quantity:Int
+}
   type Auth {
     token: ID!
     user: User
@@ -20,6 +27,7 @@ const typeDefs = gql`
     user(userId: ID!): User
     # Because we have the context functionality in place to check a JWT and decode its data, we can use a query that will always find and return the logged in user's data
     me: User
+    pets: [Pet]
   }
 
   type Mutation {
