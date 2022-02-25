@@ -21,8 +21,18 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  pets: [Pet.schema],
-  favorites: [Pet.schema]
+  pets: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Pet',
+    }
+  ],
+  favorites: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Favorite',
+    },
+  ]
 });
 
 // set up pre-save middleware to create password

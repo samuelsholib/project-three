@@ -10,14 +10,6 @@ const typeDefs = gql`
     favorites: [String]!
   }
 
-  type User {
-    _id: ID
-    name: String
-    email: String
-    password: String
-    favorites: [String]!
-  }
-
   type Auth {
     token: ID!
     user: User

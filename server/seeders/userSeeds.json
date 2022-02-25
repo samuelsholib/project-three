@@ -1,112 +1,73 @@
 [
   {
-    "name": "Brian Kernighan",
-    "email": "bkernighan@techfriends.dev",
+    "name": "Jon Jones",
+    "email": "jJones@petshop.com",
     "password": "password01",
-    "pets": [
-      "pet_id"
-    ],
-    "favorite": [
-      "pet_id"
-    ]
+    "pets": [1],
+    "favorite": ["pet_id"]
   },
   {
-    "name": "Max Kanat-Alexander",
-    "email": "mkanatalexander@techfriends.dev",
+    "name": "Luke Kante",
+    "email": "lKante@petshop.com",
     "password": "password02",
-    "pets": [
-      "pet_id"
-    ],
-    "favorite": [
-      "pet_id"
-    ]
+    "pets": [1],
+    "favorite": ["pet_id"]
   },
   {
-    "name": "Amiko",
-    "email": "amiko@techfriends.dev",
+    "name": "Joel Matip",
+    "email": "jMatip@petshop.com",
     "password": "password03",
-    "pets": [
-      "pet_id"
-    ],
-    "favorite": [
-      "pet_id"
-    ]
+    "pets": [1],
+    "favorite": ["pet_id"]
   },
   {
-    "name": "Kent Beck",
-    "email": "kbeck@techfriends.dev",
+    "name": "Berbatov Devis",
+    "email": "bDevis@petshop.com",
     "password": "password04",
-    "pets": [
-      "pet_id"
-    ],
-    "favorite": [
-      "pet_id"
-    ]
+    "pets": [1],
+    "favorite": ["pet_id"]
+  
   },
   {
-    "name": "Edward V. Berard",
-    "email": "evberard@techfriends.dev",
+    "name": " Anthony Rooney",
+    "email": "aRooney@petshop.com",
     "password": "password05",
-    "pets": [
-      "pet_id"
-    ],
-    "favorite": [
-      "pet_id"
-    ]
+    "pets": [1],
+    "favorite": ["pet_id"]
   },
   {
-    "name": "Alan Kay",
-    "email": "akay@techfriends.dev",
+    "name": "Alphonso Robert",
+    "email": "aRobert@petshop.com",
     "password": "password06",
-    "pets": [
-      "pet_id"
-    ],
-    "favorite": [
-      "pet_id"
-    ]
+    "pets": [1],
+    "favorite": ["pet_id"]
   },
   {
-    "name": "C.A.R. Hoare",
-    "email": "choare@techfriends.dev",
+    "name": "Lewandewski Sczieni",
+    "email": "lSczieni@petshop.com",
     "password": "password07",
-    "pets": [
-      "pet_id"
-    ],
-    "favorite": [
-      "pet_id"
-    ]
+    "pets": [1],
+    "favorite": ["pet_id"]
   },
   {
-    "name": "David Thomas",
-    "email": "dthomas@techfriends.dev",
+    "name": "David Pedro",
+    "email":"dPedro@petshop.com",
     "password": "password08",
-    "pets": [
-      "pet_id"
-    ],
-    "favorite": [
-      "pet_id"
-    ]
+    "pets": [1],
+    "favorite": ["pet_id"]
   },
   {
-    "name": "Donald Knuth",
-    "email": "dknuth@techfriends.dev",
+    "name": "Fred Scott",
+    "email": "fScott@petshop.com",
     "password": "password09",
-    "pets": [
-      "pet_id"
-    ],
-    "favorite": [
-      "pet_id"
-    ]
+    "pets": [1],
+    "favorite": ["pet_id"]
   },
   {
-    "name": "Lernantino",
-    "email": "lernantino@techfriends.dev",
+    "name": "Lernantino Bunnici",
+    "email": "lBunnici@petshop.com",
     "password": "password10",
-    "pets": [
-      "pet_id"
-    ],
-    "favorite": [
-      "pet_id"
-    ]
+    "pets": [1],
+    "favorite": ["pet_id"]
   }
 ]
