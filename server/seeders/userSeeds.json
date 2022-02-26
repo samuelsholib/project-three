@@ -2,72 +2,51 @@
   {
     "name": "Jon Jones",
     "email": "jJones@petshop.com",
-    "password": "password01",
-    "pets": [1],
-    "favorite": ["pet_id"]
+    "password": "password01"
   },
   {
     "name": "Luke Kante",
     "email": "lKante@petshop.com",
-    "password": "password02",
-    "pets": [1],
-    "favorite": ["pet_id"]
+    "password": "password02"
   },
   {
     "name": "Joel Matip",
     "email": "jMatip@petshop.com",
-    "password": "password03",
-    "pets": [1],
-    "favorite": ["pet_id"]
+    "password": "password03"
   },
   {
     "name": "Berbatov Devis",
     "email": "bDevis@petshop.com",
-    "password": "password04",
-    "pets": [1],
-    "favorite": ["pet_id"]
-  
+    "password": "password04"
   },
   {
     "name": " Anthony Rooney",
     "email": "aRooney@petshop.com",
-    "password": "password05",
-    "pets": [1],
-    "favorite": ["pet_id"]
+    "password": "password05"
   },
   {
     "name": "Alphonso Robert",
     "email": "aRobert@petshop.com",
-    "password": "password06",
-    "pets": [1],
-    "favorite": ["pet_id"]
+    "password": "password06"
   },
   {
     "name": "Lewandewski Sczieni",
     "email": "lSczieni@petshop.com",
-    "password": "password07",
-    "pets": [1],
-    "favorite": ["pet_id"]
+    "password": "password07"
   },
   {
     "name": "David Pedro",
-    "email":"dPedro@petshop.com",
-    "password": "password08",
-    "pets": [1],
-    "favorite": ["pet_id"]
+    "email": "dPedro@petshop.com",
+    "password": "password08"
   },
   {
     "name": "Fred Scott",
     "email": "fScott@petshop.com",
-    "password": "password09",
-    "pets": [1],
-    "favorite": ["pet_id"]
+    "password": "password09"
   },
   {
     "name": "Lernantino Bunnici",
     "email": "lBunnici@petshop.com",
-    "password": "password10",
-    "pets": [1],
-    "favorite": ["pet_id"]
+    "password": "password10"
   }
 ]
