@@ -23,7 +23,7 @@ export const ADD_PET = gql`
 `;
 
 export const ADD_FAVORITE = gql`
-  mutation add($userId: ID!, $petId: ID!) {
+  mutation addFavorite($userId: ID!, $petId: ID!) {
     addPet(userId: $userId, pet: $petID) {
       _id
       name

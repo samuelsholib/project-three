@@ -10,6 +10,8 @@ const resolvers = {
 
     pets: async () => {
       return Pet.find()
+    }, pet: async (parent, { petId }) => {
+      return Pet.findOne({ _id: petId });
     },
 
     user: async (parent, { userId }) => {
