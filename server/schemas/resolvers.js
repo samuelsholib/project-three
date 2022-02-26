@@ -10,6 +10,8 @@ const resolvers = {
 
     pets: async () => {
       return Pet.find()
+    }, pet: async (parent, { petId }) => {
+      return Pet.findOne({ _id: petId });
     },
 
     user: async (parent, { userId }) => {
@@ -33,7 +35,6 @@ const resolvers = {
     },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
-
       if (!user) {
         throw new AuthenticationError('No user with this email found!');
       }
