@@ -3,34 +3,31 @@ import { Link } from 'react-router-dom';
 import style from '../../style/main.css';
 import bckgImg from '../../images/bckg.png';
 
-const ProfileList = ({ profiles, title }) => {
-  // if (!profiles.length) {
-  //   <a href={bckgImg}>PDF Resume</a>
-
+const PetList = ({ pets, title }) => {
+  // if (!pets.length) {
   //   return <h3>No Profiles Yet</h3>;
-  // }
+  // } else
 
   return (
     <div>
       <h3 className="text-primary">{title}</h3>
       <div className="flex-row justify-space-between my-4">
-      <img className='background'  src={bckgImg} alt="" />
-        {profiles &&
-          profiles.map((profile) => (
-            <div key={profile._id} className="col-12 col-xl-6">
+        <img className='background' src={bckgImg} alt="" />
+        {pets &&
+          pets.map((pet) => (
+
+            < div className="col-12 col-xl-6" >
               <div className="card mb-3">
                 <h4 className="card-header bg-dark text-light p-2 m-0">
-                  {profile.name} <br />
+                  {pet.name} <br />
                   <span className="text-white" style={{ fontSize: '1rem' }}>
-                    currently has {profile.skills ? profile.skills.length : 0}{' '}
-                    endorsed skill
-                    {profile.skills && profile.skills.length === 1 ? '' : 's'}
+                    <img src={pet.image} alt={pet.name} width="500" height="600" />
                   </span>
                 </h4>
 
                 <Link
                   className="btn btn-block btn-squared btn-light text-dark"
-                  to={`/profiles/${profile._id}`}
+                  to={`/profiles/${pet._id}`}
                 >
                   View and endorse their skills.
                 </Link>
@@ -38,8 +35,8 @@ const ProfileList = ({ profiles, title }) => {
             </div>
           ))}
       </div>
-    </div>
+    </div >
   );
 };
 
-export default ProfileList;
+export default PetList;

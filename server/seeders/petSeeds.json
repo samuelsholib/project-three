@@ -9,7 +9,7 @@
     {
         "name": "Mr. Cool Bean",
         "description": "This is kind of like a cute kitty but not?",
-        "image": "https://imgur.com/IuqBHt5",
+        "image": "https://i.imgur.com/IuqBHt5.jpg",
         "price": 666,
         "quantity": 69
     },
@@ -31,7 +31,7 @@
         "name": "Weird fish",
         "description": "I can't figure out what this guy is but he is cute I guess",
         "image": "https://imgur.com/a/2yX0fzy",
-        "price": 4.20,
+        "price": 4,
         "quantity": 666
     },
     {
