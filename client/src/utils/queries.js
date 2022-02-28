@@ -24,16 +24,16 @@ export const QUERY_PETS = gql`
   }
 `;
 
-export const QUERY_SINGLE_PROFILE = gql`
-  query singleProfile($profileId: ID!) {
-    profile(profileId: $profileId) {
+export const QUERY_USER = gql`
+  query user($userId: ID!) {
+    user(userId: $userId) {
       _id
       name
-      skills
+      pets
+      favorites
     }
   }
 `;
-
 export const QUERY_SINGLE_PET = gql`
   query singlePet($petId: ID!) {
     pet(petId: $petId) {
