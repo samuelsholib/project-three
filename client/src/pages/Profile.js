@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, Link, useParams } from 'react-router-dom';
+import { Redirect, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
 
@@ -16,11 +16,13 @@ const Profile = () => {
     });
 
     const user = data?.me || data?.user || {};
-    console.log(user)
+    console.log("who is logged in $$$$$$$$$$$", user)
+    console.log('datsa me', data?.me)
     // redirect to personal profile page if username is yours
-    if (Auth.loggedIn() && Auth.getProfile().data._id === userId) {
-        return <Redirect to="/me" />;
-    }
+    // if (Auth.loggedIn() && Auth.getProfile().data._id === user._id) {
+    //     console.log('its the user!!!', user)
+    //     return <Redirect to="/me" />;
+    // }
 
     if (loading) {
         return <div>Loading...</div>;
@@ -35,6 +37,7 @@ const Profile = () => {
         );
     }
 
+    console.log('USER FAVS in profules', user)
     return (
         <div>
             <div className="flex-row justify-center mb-3">
