@@ -49,6 +49,31 @@ const resolvers = {
       return { token, user };
     },
 
+    addPet: async (parent, { name, description }) => {
+      const user = await Pet.create({ name, description, price, quantity, image  });
+      const token = signToken(pet);
+
+      return { token, user };
+    },
+    removePet: async (parent, args, context) => {
+      if (context.pet) {
+        return Pet.findOneAndDelete({ _id: context.pet._id });
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+
+    updatePet: async (parent, args, context) => {
+      if (context.user) {
+          const petUpdate = await Pet.findByIdAndUpdate(
+              { _id: context.pet._id },
+              { $addToSet: { updatePet: args.input } },
+              { new: true }
+          );
+          return petUpdate;
+      }
+      throw new AuthenticationError('LogIn to update users!!!');
+  },
+
     // Add a third argument to the resolver to access data in our `context`
     addFavorite: async (parent, { userId, favorite }, context) => {
       // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
