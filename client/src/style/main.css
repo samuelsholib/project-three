@@ -1,3 +1,19 @@
 .background {
     width: 80%;
 }
+.description {
+    color: rgba(218, 19, 19, 0.899);
+    font-family: verdana;
+    font-size: 30px;
+
+}
+.price {
+    color: green;
+    font-family: verdana;
+    font-size: 30px;
+}
+.quantity {
+    color: blue;
+    font-family: verdana;
+    font-size: 30px;
+}
