@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-
+import '../style/main.css';
 
 import { QUERY_SINGLE_PET } from '../utils/queries';
 
@@ -35,12 +35,14 @@ const Pet = () => {
   }
 
   return (
-    <div>
-      <h2 className="card-header">
+    <div className="card flex-column">
+      <h2 className="card-header text-center">
         {pet.name}
       </h2>
-      <img src={pet.image} alt={pet.name} />
-      <p>description: {pet.description}</p>
+      <img className="card-body align-self-center" src={pet.image} alt={pet.name} />
+      <p className="card-footer text-center description">description: {pet.description}</p>
+      <p className="card-price text-center price">price: {pet.price}</p>
+      <p className="card-quantity text-center quantity">quantity: {pet.quantity}</p>
     </div>
   );
 };

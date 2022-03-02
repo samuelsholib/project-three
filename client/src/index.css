@@ -1227,6 +1227,10 @@ label form [type='radio'] {
   align-items: stretch;
 }
 
+.align-self-center {
+  align-self: center;
+}
+
 .align-end {
   align-items: flex-end;
 }
