@@ -53,7 +53,9 @@ export const QUERY_ME = gql`
       _id
       name
       pets
-      favorites
+      favorites {
+        name
+      }
     }
   }
 `;
