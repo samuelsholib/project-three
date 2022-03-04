@@ -6,7 +6,7 @@ const typeDefs = gql`
     name: String
     email: String
     password: String
-    pets: [String]!
+    pets: [Pet]!
     favorites: [Pet]!
   }
 type Pet{
@@ -35,7 +35,7 @@ type Pet{
     addUser(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
 
-    addFavorite(userId: ID!, favorite: String!): User
+    addFavorite(userId: ID!, petId: ID!): User
     removeUser: User
     removeFavorite(favorite: String!): User
     addPet(input: String!): Pet
