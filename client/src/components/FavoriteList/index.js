@@ -20,7 +20,9 @@ const FavoriteList = ({
                         console.log('fav', favorite)
                         return (
                             <div className="card mb-3">
-                                <h4 className="card-header bg-primary text-light p-2 m-0">{favorite.name}</h4></div>
+                                <h4 className="card-header bg-primary text-light p-2 m-0">{favorite.name}</h4>
+                                <img src={favorite.image} />
+                                <p>{favorite.description}</p></div>
                         )
 
                     })

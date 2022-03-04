@@ -53,13 +53,16 @@ function App() {
             <Route exact path="/signup">
               <Signup />
             </Route>
+            {/* <Route exact path="/newpet/:userId">
+              <NewPet />
+            </Route> */}
             <Route exact path="/pet/:petId">
               <Pet />
             </Route>
-            <Route exact path="/me">
+            <Route exact path="/profiles/:userId">
               <Profile />
             </Route>
-            <Route exact path="/profiles/:userId">
+            <Route exact path="/me">
               <Profile />
             </Route>
           </div>

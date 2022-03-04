@@ -1,9 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
+import { Link, useParams } from 'react-router-dom';
 import Auth from '../../utils/auth';
-
+import { useQuery } from '@apollo/client';
+import { QUERY_USER, QUERY_ME } from '../../utils/queries';
 const Header = () => {
+  const { userId } = useParams();
+
+  const { loading, data } = useQuery(userId ? QUERY_USER : QUERY_ME, {
+    variables: { userId: userId },
+  });
+
+  const user = data?.me || data?.user || {};
+  console.log('last user?', user)
   const logout = (event) => {
     event.preventDefault();
     Auth.logout();
@@ -22,8 +30,11 @@ const Header = () => {
         <div>
           {Auth.loggedIn() ? (
             <>
-              <Link className="btn btn-lg btn-primary m-2" to="/me">
-                View My Profile
+              <Link
+                className="btn btn-block btn-squared btn-light text-dark"
+                to={`/me`}
+              >
+                View your profile.
               </Link>
               <button className="btn btn-lg btn-light m-2" onClick={logout}>
                 Logout

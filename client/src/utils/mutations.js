@@ -13,21 +13,30 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_PET = gql`
-  mutation addPet($userId: ID!, $petId: ID!) {
-    addPet(userId: $userId, pet: $petID) {
+  mutation addPet($userId: ID!) {
+    addPet(userId: $userId) {
       _id
       name
-      pets
+      pets{
+        name
+      }
     }
   }
 `;
 
 export const ADD_FAVORITE = gql`
   mutation addFavorite($userId: ID!, $petId: ID!) {
-    addPet(userId: $userId, pet: $petID) {
+    addPet(userId: $userId, petId: $petId) {
       _id
       name
-      favorites
+      favorites {
+        _id
+      name
+      description
+      image
+      price
+      quantity
+      }
     }
   }
 `;
@@ -45,9 +54,11 @@ export const LOGIN_USER = gql`
 `;
 
 export const REMOVE_PET = gql`
-  mutation removePet($pet: ID!) {
-    removePet(pet: $pet) {
-      pets
+  mutation removePet($petId: ID!) {
+    removePet(petId: $petId) {
+      pets{
+        name
+      }
     }
   }
 `;
@@ -62,10 +73,17 @@ export const REMOVE_USER = gql`
 
 export const REMOVE_FAVORITE = gql`
   mutation removeFavorite($userId: ID!, $petId: ID!)  {
-    removeFavorite( userId: $userId, pet: $pet) {
+    removeFavorite( userId: $userId, petId: $petId) {
       _id
       name
-      favorites
+      favorites {
+        _id
+      name
+      description
+      image
+      price
+      quantity
+      }
     }
   }
 `;

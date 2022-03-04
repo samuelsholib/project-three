@@ -5,17 +5,18 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     users: async () => {
-      return User.find();
+      return User.find().populate('favorites').populate('pets');
     },
 
     pets: async () => {
       return Pet.find()
-    }, pet: async (parent, { petId }) => {
+    },
+    pet: async (parent, { petId }) => {
       return Pet.findOne({ _id: petId });
     },
 
     user: async (parent, { userId }) => {
-      return User.findOne({ _id: userId });
+      return User.findOne({ _id: userId }).populate('favorites').populate('pets');
     },
     // By adding context to our query, we can retrieve the logged in user without specifically searching for them
     me: async (parent, args, context) => {
@@ -50,13 +51,13 @@ const resolvers = {
     },
 
     // Add a third argument to the resolver to access data in our `context`
-    addFavorite: async (parent, { userId, favorite }, context) => {
+    addFavorite: async (parent, { userId, petId }, context) => {
       // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
       if (context.user) {
         return User.findOneAndUpdate(
           { _id: userId },
           {
-            $addToSet: { favorites: favorite },
+            $addToSet: { favorites: petId },
           },
           {
             new: true,

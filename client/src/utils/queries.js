@@ -7,7 +7,14 @@ export const QUERY_PROFILES = gql`
       _id
       name
       pets
-      favorites
+      favorites {
+        _id
+      name
+      description
+      image
+      price
+      quantity
+      }
     }
   }
 `;
@@ -29,8 +36,17 @@ export const QUERY_USER = gql`
     user(userId: $userId) {
       _id
       name
-      pets
-      favorites
+      pets{
+        name
+      }
+      favorites {
+        _id
+      name
+      description
+      image
+      price
+      quantity
+      }
     }
   }
 `;
@@ -52,9 +68,16 @@ export const QUERY_ME = gql`
     me {
       _id
       name
-      pets
-      favorites {
+      pets{
         name
+      }
+      favorites {
+        _id
+      name
+      description
+      image
+      price
+      quantity
       }
     }
   }
