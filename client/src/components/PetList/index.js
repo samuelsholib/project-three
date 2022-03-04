@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import style from '../../style/main.css';
+//import style from '../../style/main.css';
 import bckgImg from '../../images/bckg.png';
 
 const PetList = ({ pets, title }) => {

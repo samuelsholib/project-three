@@ -13,8 +13,10 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_PET = gql`
+
   mutation addPet($userId: ID!) {
     addPet(userId: $userId) {
+
       _id
       name
       pets{
@@ -23,6 +25,18 @@ export const ADD_PET = gql`
     }
   }
 `;
+export const UPDATE_PET = gql`
+mutation updatePet($name: String!, $description: String!, $price: Number!, quantity: Number, image: String) {
+  updatePet($name: String!, $description: String!, $price: Number!, quantity: Number, image: String) {
+    token
+    pet {
+      _id
+      name
+    }
+  }
+}
+`;
+
 
 export const ADD_FAVORITE = gql`
   mutation addFavorite($userId: ID!, $petId: ID!) {

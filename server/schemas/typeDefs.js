@@ -38,6 +38,10 @@ type Pet{
     addFavorite(userId: ID!, petId: ID!): User
     removeUser: User
     removeFavorite(favorite: String!): User
+    addPet(input: String!): Pet
+    removePet(petId: ID!): User
+    updatePet(petId: ID!): Pet
+
   }
 `;
 
