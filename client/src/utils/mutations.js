@@ -26,8 +26,8 @@ export const ADD_PET = gql`
   }
 `;
 export const UPDATE_PET = gql`
-mutation updatePet($name: String!, $description: String!, $price: Number!, quantity: Number, image: String) {
-  updatePet($name: String!, $description: String!, $price: Number!, quantity: Number, image: String) {
+mutation updatePet($name: String!, $description: String!, $price: Number!, $quantity: Number!, $image: String!) {
+  updatePet(name: $name, description: $description, price: $price, quantity: $quantity, image: $image) {
     token
     pet {
       _id
