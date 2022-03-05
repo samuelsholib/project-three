@@ -13,12 +13,12 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_PET = gql`
-
-  mutation addPet($userId: ID!) {
-    addPet(userId: $userId) {
-
-      _id
-      name
+mutation addPet($petname: String!, $description: String!, $price: Number!, $quantity: Number!) {
+  addPet(petname: $petname, description: $description, price: $price, quantity: $quantity) {
+user {
+_id
+  name
+}
       pets{
         name
       }

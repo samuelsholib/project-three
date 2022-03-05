@@ -5,14 +5,14 @@ import bckgImg from '../../images/bckg.png';
 
 const PetList = ({ pets, title }) => {
   if (!pets.length) {
-    return <h3>No Profiles Yet</h3>;
+    return <h3>No Pets Yet</h3>;
   } else
 
     return (
-      <div>
+      <div className="petList">
         <h3 className="text-primary">{title}</h3>
         <div className="flex-row justify-space-between my-4">
-          <img className='background' src={bckgImg} alt="" />
+           {/* <img className='background' src={bckgImg} alt="" /> */}
           {pets &&
             pets.map((pet) => (
 
@@ -29,7 +29,7 @@ const PetList = ({ pets, title }) => {
                     className="btn btn-block btn-squared btn-light text-dark"
                     to={`/pet/${pet._id}`}
                   >
-                    View and endorse their skills.
+                    Add into your favorites list if you like this pet.
                   </Link>
                 </div>
               </div>

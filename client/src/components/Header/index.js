@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import Auth from '../../utils/auth';
 import { useQuery } from '@apollo/client';
 import { QUERY_USER, QUERY_ME } from '../../utils/queries';
+import Style from '../../style/main.css'
 const Header = () => {
   const { userId } = useParams();
 
@@ -17,7 +18,7 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <header className="bg-info text-dark mb-4 py-3 display-flex align-center">
+    <header className="header">
       <div className="container flex-column justify-space-between-lg justify-center align-center text-center">
         <Link className="text-dark" to="/">
           <h1 className="m-0" style={{ fontSize: '3rem' }}>

@@ -1,5 +1,5 @@
 {
-  "name": "tech-friends",
+  "name": "pet-store",
   "version": "1.0.0",
   "description": "In this demo, you will verify if a token is valid and carry",
   "main": "server/server.js",

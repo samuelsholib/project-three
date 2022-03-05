@@ -14,13 +14,13 @@ const Profile = () => {
     });
 
     const user = data?.me || data?.user || {};
-    // redirect to personal profile page if username is yours
-    // if (Auth.loggedIn() && Auth.getProfile().data._id === user._id) {
-    //     console.log('its the user!!!', user.me)
-    //     console.log()
-    //     return <Redirect to="/me" user={user.me} />;
-    // }
-    // console.log('its the REAL user', user)
+    //redirect to personal profile page if username is yours
+    if (Auth.loggedIn() && Auth.getProfile().data._id === user._id) {
+        console.log('its the user!!!', user.me)
+        console.log()
+        return <Redirect to="/me" user={user.me} />;
+    }
+    console.log('its the REAL user', user)
     if (loading) {
         return <div>Loading...</div>;
     }
